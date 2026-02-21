@@ -1,0 +1,54 @@
+{
+  "agent_name": "Tax Optimization Agent",
+  "agent_id": "6999b6c22b9e1319f70b144d",
+  "description": "Analyzes user's deduction inputs against all 2026 Luxembourg tax categories, calculates gaps, computes marginal tax rate, generates Opti-Score (0-100), and produces personalized savings recommendations",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "opti_score": "number",
+    "marginal_tax_rate": "number",
+    "total_missed_savings": "number",
+    "total_potential_savings": "number",
+    "categories": [
+      {
+        "category_name": "string",
+        "current_amount": "number",
+        "maximum_amount": "number",
+        "gap_amount": "number",
+        "usage_percentage": "number"
+      }
+    ],
+    "recommendations": [
+      {
+        "category": "string",
+        "action": "string",
+        "potential_saving": "number",
+        "priority": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "opti_score": 0,
+    "marginal_tax_rate": 0,
+    "total_missed_savings": 0,
+    "total_potential_savings": 0,
+    "categories": [
+      {
+        "category_name": "sample string",
+        "current_amount": 0,
+        "maximum_amount": 0,
+        "gap_amount": 0,
+        "usage_percentage": 0
+      }
+    ],
+    "recommendations": [
+      {
+        "category": "sample string",
+        "action": "sample string",
+        "potential_saving": 0,
+        "priority": "sample string"
+      }
+    ]
+  }
+}

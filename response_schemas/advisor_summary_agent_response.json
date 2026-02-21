@@ -1,0 +1,124 @@
+{
+  "agent_name": "Advisor Summary Agent",
+  "agent_id": "6999b6c2fdb12766dbc0175a",
+  "description": "Compiles a comprehensive financial situation brief combining user profile, tax gap analysis, aid eligibility, and wealth data into a structured summary for financial advisor consultations",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "profile_summary": {
+      "full_name": "string",
+      "age": "number",
+      "commune": "string",
+      "marital_status": "string",
+      "tax_class": "string",
+      "dependents": "number",
+      "employment": "string",
+      "gross_salary": "number",
+      "housing_status": "string"
+    },
+    "tax_status": {
+      "opti_score": "number",
+      "total_potential_savings": "number",
+      "marginal_tax_rate": "number",
+      "key_gaps": [
+        {
+          "category": "string",
+          "gap_amount": "number",
+          "potential_saving": "number"
+        }
+      ],
+      "priority_recommendations": [
+        "string"
+      ]
+    },
+    "aid_status": {
+      "total_eligible": "number",
+      "total_annual_value": "number",
+      "key_aids": [
+        {
+          "name": "string",
+          "annual_value": "number",
+          "status": "string"
+        }
+      ]
+    },
+    "wealth_snapshot": {
+      "net_worth": "number",
+      "total_assets": "number",
+      "total_debts": "number",
+      "monthly_cash_flow": "number",
+      "debt_to_asset_ratio": "number"
+    },
+    "talking_points": {
+      "priority_items": [
+        "string"
+      ],
+      "quick_wins": [
+        "string"
+      ],
+      "long_term_strategies": [
+        "string"
+      ]
+    },
+    "generated_date": "string"
+  },
+  "example_response": {
+    "profile_summary": {
+      "full_name": "sample string",
+      "age": 0,
+      "commune": "sample string",
+      "marital_status": "sample string",
+      "tax_class": "sample string",
+      "dependents": 0,
+      "employment": "sample string",
+      "gross_salary": 0,
+      "housing_status": "sample string"
+    },
+    "tax_status": {
+      "opti_score": 0,
+      "total_potential_savings": 0,
+      "marginal_tax_rate": 0,
+      "key_gaps": [
+        {
+          "category": "sample string",
+          "gap_amount": 0,
+          "potential_saving": 0
+        }
+      ],
+      "priority_recommendations": [
+        "sample string"
+      ]
+    },
+    "aid_status": {
+      "total_eligible": 0,
+      "total_annual_value": 0,
+      "key_aids": [
+        {
+          "name": "sample string",
+          "annual_value": 0,
+          "status": "sample string"
+        }
+      ]
+    },
+    "wealth_snapshot": {
+      "net_worth": 0,
+      "total_assets": 0,
+      "total_debts": 0,
+      "monthly_cash_flow": 0,
+      "debt_to_asset_ratio": 0
+    },
+    "talking_points": {
+      "priority_items": [
+        "sample string"
+      ],
+      "quick_wins": [
+        "sample string"
+      ],
+      "long_term_strategies": [
+        "sample string"
+      ]
+    },
+    "generated_date": "sample string"
+  }
+}

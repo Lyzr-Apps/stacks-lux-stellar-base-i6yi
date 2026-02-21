@@ -1,0 +1,36 @@
+{
+  "agent_name": "Aid Discovery Agent",
+  "agent_id": "6999b6c29b6b3fc30ee87332",
+  "description": "Evaluates user's profile against Luxembourg state-level and commune-level aid programs, returns eligibility status and estimated annual value per aid",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "total_eligible_aids_count": "number",
+    "total_estimated_annual_value": "number",
+    "aids": [
+      {
+        "aid_name": "string",
+        "category": "string",
+        "status": "string",
+        "estimated_annual_value": "number",
+        "description": "string",
+        "requirements_summary": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "total_eligible_aids_count": 0,
+    "total_estimated_annual_value": 0,
+    "aids": [
+      {
+        "aid_name": "sample string",
+        "category": "sample string",
+        "status": "sample string",
+        "estimated_annual_value": 0,
+        "description": "sample string",
+        "requirements_summary": "sample string"
+      }
+    ]
+  }
+}

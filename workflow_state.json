@@ -1,0 +1,16 @@
+{
+  "agents": {
+    "tax_optimization": {
+      "agent_id": "6999b6c22b9e1319f70b144d",
+      "name": "Tax Optimization Agent"
+    },
+    "aid_discovery": {
+      "agent_id": "6999b6c29b6b3fc30ee87332",
+      "name": "Aid Discovery Agent"
+    },
+    "advisor_summary": {
+      "agent_id": "6999b6c2fdb12766dbc0175a",
+      "name": "Advisor Summary Agent"
+    }
+  }
+}

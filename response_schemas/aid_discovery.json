@@ -1,0 +1,32 @@
+{
+  "agent_name": "Aid Discovery Agent",
+  "agent_id": "6999b6c29b6b3fc30ee87332",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "total_eligible_aids_count": { "type": "number" },
+      "total_estimated_annual_value": { "type": "number" },
+      "aids": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "aid_name": { "type": "string" },
+            "category": { "type": "string" },
+            "status": { "type": "string" },
+            "estimated_annual_value": { "type": "number" },
+            "description": { "type": "string" },
+            "requirements_summary": { "type": "string" }
+          },
+          "required": ["aid_name", "category", "status", "estimated_annual_value", "description", "requirements_summary"],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": ["total_eligible_aids_count", "total_estimated_annual_value", "aids"],
+    "additionalProperties": false
+  }
+}

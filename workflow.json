@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Financial Data",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "tax_agent",
+      "type": "Agent",
+      "label": "Tax Optimization Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6999b6c22b9e1319f70b144d"
+    },
+    {
+      "id": "aid_agent",
+      "type": "Agent",
+      "label": "Aid Discovery Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6999b6c29b6b3fc30ee87332"
+    },
+    {
+      "id": "advisor_agent",
+      "type": "Agent",
+      "label": "Advisor Summary Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6999b6c2fdb12766dbc0175a"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Dashboard Results",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    { "source": "input_node", "target": "tax_agent" },
+    { "source": "input_node", "target": "aid_agent" },
+    { "source": "input_node", "target": "advisor_agent" },
+    { "source": "tax_agent", "target": "output_node" },
+    { "source": "aid_agent", "target": "output_node" },
+    { "source": "advisor_agent", "target": "output_node" }
+  ]
+}

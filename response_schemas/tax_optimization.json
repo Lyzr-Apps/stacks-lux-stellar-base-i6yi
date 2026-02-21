@@ -1,0 +1,47 @@
+{
+  "agent_name": "Tax Optimization Agent",
+  "agent_id": "6999b6c22b9e1319f70b144d",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "opti_score": { "type": "number" },
+      "marginal_tax_rate": { "type": "number" },
+      "total_missed_savings": { "type": "number" },
+      "total_potential_savings": { "type": "number" },
+      "categories": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "category_name": { "type": "string" },
+            "current_amount": { "type": "number" },
+            "maximum_amount": { "type": "number" },
+            "gap_amount": { "type": "number" },
+            "usage_percentage": { "type": "number" }
+          },
+          "required": ["category_name", "current_amount", "maximum_amount", "gap_amount", "usage_percentage"],
+          "additionalProperties": false
+        }
+      },
+      "recommendations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "category": { "type": "string" },
+            "action": { "type": "string" },
+            "potential_saving": { "type": "number" },
+            "priority": { "type": "string" }
+          },
+          "required": ["category", "action", "potential_saving", "priority"],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": ["opti_score", "marginal_tax_rate", "total_missed_savings", "total_potential_savings", "categories", "recommendations"],
+    "additionalProperties": false
+  }
+}

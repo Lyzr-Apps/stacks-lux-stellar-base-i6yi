@@ -1,0 +1,111 @@
+{
+  "agent_name": "Advisor Summary Agent",
+  "agent_id": "6999b6c2fdb12766dbc0175a",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "profile_summary": {
+        "type": "object",
+        "properties": {
+          "full_name": { "type": "string" },
+          "age": { "type": "number" },
+          "commune": { "type": "string" },
+          "marital_status": { "type": "string" },
+          "tax_class": { "type": "string" },
+          "dependents": { "type": "number" },
+          "employment": { "type": "string" },
+          "gross_salary": { "type": "number" },
+          "housing_status": { "type": "string" }
+        },
+        "required": ["full_name", "age", "commune", "marital_status", "tax_class", "dependents", "employment", "gross_salary", "housing_status"],
+        "additionalProperties": false
+      },
+      "tax_status": {
+        "type": "object",
+        "properties": {
+          "opti_score": { "type": "number" },
+          "total_potential_savings": { "type": "number" },
+          "marginal_tax_rate": { "type": "number" },
+          "key_gaps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "category": { "type": "string" },
+                "gap_amount": { "type": "number" },
+                "potential_saving": { "type": "number" }
+              },
+              "required": ["category", "gap_amount", "potential_saving"],
+              "additionalProperties": false
+            }
+          },
+          "priority_recommendations": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["opti_score", "total_potential_savings", "marginal_tax_rate", "key_gaps", "priority_recommendations"],
+        "additionalProperties": false
+      },
+      "aid_status": {
+        "type": "object",
+        "properties": {
+          "total_eligible": { "type": "number" },
+          "total_annual_value": { "type": "number" },
+          "key_aids": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "annual_value": { "type": "number" },
+                "status": { "type": "string" }
+              },
+              "required": ["name", "annual_value", "status"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["total_eligible", "total_annual_value", "key_aids"],
+        "additionalProperties": false
+      },
+      "wealth_snapshot": {
+        "type": "object",
+        "properties": {
+          "net_worth": { "type": "number" },
+          "total_assets": { "type": "number" },
+          "total_debts": { "type": "number" },
+          "monthly_cash_flow": { "type": "number" },
+          "debt_to_asset_ratio": { "type": "number" }
+        },
+        "required": ["net_worth", "total_assets", "total_debts", "monthly_cash_flow", "debt_to_asset_ratio"],
+        "additionalProperties": false
+      },
+      "talking_points": {
+        "type": "object",
+        "properties": {
+          "priority_items": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "quick_wins": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "long_term_strategies": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["priority_items", "quick_wins", "long_term_strategies"],
+        "additionalProperties": false
+      },
+      "generated_date": { "type": "string" }
+    },
+    "required": ["profile_summary", "tax_status", "aid_status", "wealth_snapshot", "talking_points", "generated_date"],
+    "additionalProperties": false
+  }
+}
